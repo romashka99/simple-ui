@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Button color error 1`] = `
+<button
+  class="button button--error button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button color info 1`] = `
+<button
+  class="button button--info button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button color primary 1`] = `
+<button
+  class="button button--primary button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button color success 1`] = `
+<button
+  class="button button--success button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button color warning 1`] = `
+<button
+  class="button button--warning button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default custom className 1`] = `
+<button
+  class="button button--default button--medium test-class"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default disabled 1`] = `
+<button
+  class="button button--default button--medium"
+  disabled=""
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default large 1`] = `
+<button
+  class="button button--default button--large"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default link 1`] = `
+<button
+  class="button button--default button--medium is-link"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default onClick 1`] = `
+<button
+  class="button button--default button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default plain 1`] = `
+<button
+  class="button button--default button--medium is-plain"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default round 1`] = `
+<button
+  class="button button--default button--medium is-round"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default small 1`] = `
+<button
+  class="button button--default button--small"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type custom className 1`] = `
+<button
+  class="button button--default button--medium test-class"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type disabled 1`] = `
+<button
+  class="button button--default button--medium"
+  disabled=""
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type large 1`] = `
+<button
+  class="button button--default button--large"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type link 1`] = `
+<button
+  class="button button--default button--medium is-link"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type onClick 1`] = `
+<button
+  class="button button--default button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type plain 1`] = `
+<button
+  class="button button--default button--medium is-plain"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type round 1`] = `
+<button
+  class="button button--default button--medium is-round"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type small 1`] = `
+<button
+  class="button button--default button--small"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default type without attr 1`] = `
+<button
+  class="button button--default button--medium"
+>
+  Click
+</button>
+`;
+
+exports[`Test Button default without attr 1`] = `
+<button
+  class="button button--default button--medium"
+>
+  Click
+</button>
+`;

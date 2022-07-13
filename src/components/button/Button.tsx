@@ -27,11 +27,11 @@ export default function Button({
 	onClick,
 	children,
 }: IButtonProps) {
-	const classes = `button button--${color} button--${size} ${
-		plain ? 'is-plain' : ''
-	} ${round ? 'is-round' : ''} ${circle ? 'is-circle' : ''} ${
-		link ? 'is-link' : ''
-	} ${className}`;
+	const classes = `button button--${color} button--${size}${
+		plain ? ' is-plain' : ''
+	}${round ? ' is-round' : ''}${circle ? ' is-circle' : ''}${
+		link ? ' is-link' : ''
+	}${className ? ' ' + className : ''}`;
 
 	return (
 		<button className={classes} onClick={onClick} disabled={disabled}>

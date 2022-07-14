@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import Button from './Button';
@@ -64,7 +64,7 @@ describe('Test Button', () => {
 		});
 
 		test('small', () => {
-			render(<Button size='small'>Click</Button>);
+			render(<Button scale='small'>Click</Button>);
 			const button = screen.getByRole('button');
 			expect(button.classList.length).toBe(3);
 			expect(button.classList.contains('button')).toBe(true);
@@ -75,7 +75,7 @@ describe('Test Button', () => {
 		});
 
 		test('large', () => {
-			render(<Button size='large'>Click</Button>);
+			render(<Button scale='large'>Click</Button>);
 			const button = screen.getByRole('button');
 			expect(button.classList.length).toBe(3);
 			expect(button.classList.contains('button')).toBe(true);

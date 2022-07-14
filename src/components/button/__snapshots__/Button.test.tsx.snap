@@ -3,6 +3,7 @@
 exports[`Test Button color error 1`] = `
 <button
   class="button button--error button--medium"
+  data-testid="button"
 >
   Click
 </button>
@@ -11,6 +12,7 @@ exports[`Test Button color error 1`] = `
 exports[`Test Button color info 1`] = `
 <button
   class="button button--info button--medium"
+  data-testid="button"
 >
   Click
 </button>
@@ -19,6 +21,7 @@ exports[`Test Button color info 1`] = `
 exports[`Test Button color primary 1`] = `
 <button
   class="button button--primary button--medium"
+  data-testid="button"
 >
   Click
 </button>
@@ -27,6 +30,7 @@ exports[`Test Button color primary 1`] = `
 exports[`Test Button color success 1`] = `
 <button
   class="button button--success button--medium"
+  data-testid="button"
 >
   Click
 </button>
@@ -35,6 +39,7 @@ exports[`Test Button color success 1`] = `
 exports[`Test Button color warning 1`] = `
 <button
   class="button button--warning button--medium"
+  data-testid="button"
 >
   Click
 </button>
@@ -43,6 +48,7 @@ exports[`Test Button color warning 1`] = `
 exports[`Test Button default custom className 1`] = `
 <button
   class="button button--default button--medium test-class"
+  data-testid="button"
 >
   Click
 </button>
@@ -51,6 +57,7 @@ exports[`Test Button default custom className 1`] = `
 exports[`Test Button default disabled 1`] = `
 <button
   class="button button--default button--medium"
+  data-testid="button"
   disabled=""
 >
   Click
@@ -60,6 +67,7 @@ exports[`Test Button default disabled 1`] = `
 exports[`Test Button default large 1`] = `
 <button
   class="button button--default button--large"
+  data-testid="button"
 >
   Click
 </button>
@@ -68,6 +76,7 @@ exports[`Test Button default large 1`] = `
 exports[`Test Button default link 1`] = `
 <button
   class="button button--default button--medium is-link"
+  data-testid="button"
 >
   Click
 </button>
@@ -76,6 +85,7 @@ exports[`Test Button default link 1`] = `
 exports[`Test Button default onClick 1`] = `
 <button
   class="button button--default button--medium"
+  data-testid="button"
 >
   Click
 </button>
@@ -84,6 +94,7 @@ exports[`Test Button default onClick 1`] = `
 exports[`Test Button default plain 1`] = `
 <button
   class="button button--default button--medium is-plain"
+  data-testid="button"
 >
   Click
 </button>
@@ -92,6 +103,7 @@ exports[`Test Button default plain 1`] = `
 exports[`Test Button default round 1`] = `
 <button
   class="button button--default button--medium is-round"
+  data-testid="button"
 >
   Click
 </button>
@@ -100,79 +112,7 @@ exports[`Test Button default round 1`] = `
 exports[`Test Button default small 1`] = `
 <button
   class="button button--default button--small"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type custom className 1`] = `
-<button
-  class="button button--default button--medium test-class"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type disabled 1`] = `
-<button
-  class="button button--default button--medium"
-  disabled=""
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type large 1`] = `
-<button
-  class="button button--default button--large"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type link 1`] = `
-<button
-  class="button button--default button--medium is-link"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type onClick 1`] = `
-<button
-  class="button button--default button--medium"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type plain 1`] = `
-<button
-  class="button button--default button--medium is-plain"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type round 1`] = `
-<button
-  class="button button--default button--medium is-round"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type small 1`] = `
-<button
-  class="button button--default button--small"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default type without attr 1`] = `
-<button
-  class="button button--default button--medium"
+  data-testid="button"
 >
   Click
 </button>
@@ -181,6 +121,7 @@ exports[`Test Button default type without attr 1`] = `
 exports[`Test Button default without attr 1`] = `
 <button
   class="button button--default button--medium"
+  data-testid="button"
 >
   Click
 </button>

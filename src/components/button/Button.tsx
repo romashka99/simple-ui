@@ -1,40 +1,40 @@
-import React, { ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { Color, Size } from '../../types/types';
 import './Button.scss';
 
-interface IButtonProps {
-	className?: string;
+interface IButtonProps
+	extends DetailedHTMLProps<
+			ButtonHTMLAttributes<HTMLButtonElement>,
+			HTMLButtonElement
+		>,
+		React.AriaAttributes {
 	color?: Color;
-	size?: Size;
+	scale?: Size;
 	plain?: boolean;
 	round?: boolean;
 	circle?: boolean;
 	link?: boolean;
-	disabled?: boolean;
-	children?: ReactNode;
-	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export default function Button({
-	className,
 	color = 'default',
-	size = 'medium',
+	scale = 'medium',
 	plain,
 	round,
 	circle,
 	link,
-	disabled,
-	onClick,
+	className,
 	children,
+	...props
 }: IButtonProps) {
-	const classes = `button button--${color} button--${size}${
+	const classes = `button button--${color} button--${scale}${
 		plain ? ' is-plain' : ''
 	}${round ? ' is-round' : ''}${circle ? ' is-circle' : ''}${
 		link ? ' is-link' : ''
 	}${className ? ' ' + className : ''}`;
 
 	return (
-		<button className={classes} onClick={onClick} disabled={disabled}>
+		<button data-testid='button' className={classes} {...props}>
 			{children}
 		</button>
 	);

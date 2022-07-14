@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Input type text size large 1`] = `
+<input
+  class="input input--large"
+  data-testid="input"
+  type="text"
+/>
+`;
+
+exports[`Test Input type text size small 1`] = `
+<input
+  class="input input--small"
+  data-testid="input"
+  type="text"
+/>
+`;
+
+exports[`Test Input type text without attr 1`] = `
+<input
+  class="input input--medium"
+  data-testid="input"
+  type="text"
+/>
+`;

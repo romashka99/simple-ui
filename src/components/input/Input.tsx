@@ -1,52 +1,33 @@
-import React from 'react';
+import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 import { Color, Size } from '../../types/types';
 import './Input.scss';
 
 export type InputType = 'text' | 'email' | 'password';
 
-interface IInputProps {
-	value?: string | number | string[];
+interface IInputProps
+	extends DetailedHTMLProps<
+			InputHTMLAttributes<HTMLInputElement>,
+			HTMLInputElement
+		>,
+		React.AriaAttributes {
 	label?: string;
-	className?: string;
 	type?: InputType;
-	maxLength?: number;
-	minLength?: number;
-	placeholder?: string;
 	color?: Color;
-	size?: Size;
-	readOnly?: boolean;
-	disabled?: boolean;
-	onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	scale?: Size;
 }
 
-export default function Input({
-	value = '',
+export default React.memo(function Input({
 	label,
-	className,
-	size = 'medium',
 	type = 'text',
-	placeholder,
-	minLength,
-	maxLength,
-	readOnly,
-	disabled,
-	onChange,
+	scale = 'medium',
+	className,
+	...props
 }: IInputProps) {
-	const classes = `input input--${size}${className ? ' ' + className : ''}`;
+	const classes = `input input--${scale}${className ? ' ' + className : ''}`;
 	return (
 		<>
 			{label && <label className='input__label'>{label}</label>}
-			<input
-				value={value}
-				type={type}
-				placeholder={placeholder}
-				minLength={minLength}
-				maxLength={maxLength}
-				className={classes}
-				readOnly={readOnly}
-				disabled={disabled}
-				onChange={onChange}
-			/>
+			<input data-testid='input' type={type} className={classes} {...props} />
 		</>
 	);
-}
+});

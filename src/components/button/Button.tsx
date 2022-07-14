@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Color, Size } from '../../types/types';
-import './Button.css';
+import './Button.scss';
 
 interface IButtonProps {
 	className?: string;

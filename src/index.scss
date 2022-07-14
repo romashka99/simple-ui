@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+body {
+	font-family: $font-family;
+	font-weight: $font-weight;
+	line-height: $font-line-height;
+	font-size: $font-size-base;
+	background-color: $color;
+	color: $text-color-primary;
+	margin: 0;
+	direction: ltr;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+}

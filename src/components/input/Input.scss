@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+
+.input {
+	padding: 0 10px;
+	border: $border;
+	border-radius: $border-radius-base;
+	background-color: $fill-color-blank;
+	color: $text-color-regular;
+	height: $height;
+	line-height: $height;
+	outline: none;
+
+	&::placeholder {
+		color: $text-color-regular;
+	}
+
+	&--small {
+		font-size: $font-size-small;
+		height: $height-small;
+		line-height: $height-small;
+		padding: 0 7px;
+		border-radius: $border-radius-small;
+	}
+
+	&--large {
+		font-size: $font-size-large;
+		padding: 0 15px;
+		height: $height-large;
+		line-height: $height-large;
+	}
+
+	&:disabled {
+		border-color: $disabled-border-color;
+		background-color: $disabled-bg-color;
+		color: $disabled-text-color;
+		cursor: not-allowed;
+	}
+
+	&:not(&:disabled) {
+		&:hover {
+			box-shadow: $box-shadow-lighter;
+		}
+		&:active,
+		&:focus {
+			border-color: $border-color-active;
+		}
+	}
+}

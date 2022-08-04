@@ -13,7 +13,6 @@ interface IButtonProps
 	plain?: boolean;
 	round?: boolean;
 	circle?: boolean;
-	link?: boolean;
 }
 
 export default function Button({
@@ -22,7 +21,6 @@ export default function Button({
 	plain,
 	round,
 	circle,
-	link,
 	className,
 	children,
 	...props
@@ -30,8 +28,8 @@ export default function Button({
 	const classes = `button button--${color} button--${scale}${
 		plain ? ' is-plain' : ''
 	}${round ? ' is-round' : ''}${circle ? ' is-circle' : ''}${
-		link ? ' is-link' : ''
-	}${className ? ' ' + className : ''}`;
+		className ? ' ' + className : ''
+	}`;
 
 	return (
 		<button data-testid='button' className={classes} {...props}>

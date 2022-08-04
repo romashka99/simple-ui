@@ -51,18 +51,6 @@ describe('Test Button', () => {
 			expect(button).toMatchSnapshot();
 		});
 
-		test('link', () => {
-			render(<Button link>Click</Button>);
-			const button = screen.getByRole('button');
-			expect(button.classList.length).toBe(4);
-			expect(button.classList.contains('button')).toBe(true);
-			expect(button.classList.contains('button--default')).toBe(true);
-			expect(button.classList.contains('button--medium')).toBe(true);
-			expect(button.classList.contains('is-link')).toBe(true);
-			expect(button.getAttribute('disabled')).toBeNull();
-			expect(button).toMatchSnapshot();
-		});
-
 		test('small', () => {
 			render(<Button scale='small'>Click</Button>);
 			const button = screen.getByRole('button');

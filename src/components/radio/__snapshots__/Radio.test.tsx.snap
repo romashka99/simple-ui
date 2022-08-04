@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Radio without attr 1`] = `
+<input
+  class="radio radio--default radio--medium"
+  data-testid="radio"
+  type="radio"
+/>
+`;

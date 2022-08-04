@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Radio without attr 1`] = `
+<input
+  class="switch switch--default switch--medium"
+  data-testid="switch"
+  type="checkbox"
+/>
+`;
+
+exports[`Test Switch without attr 1`] = `
+<input
+  class="switch switch--default switch--medium"
+  data-testid="switch"
+  type="checkbox"
+/>
+`;

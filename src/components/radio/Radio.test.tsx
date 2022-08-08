@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Radio from './index';
+import Radio from '.';
 
 describe('Test Radio', () => {
 	test('without attr', () => {

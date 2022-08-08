@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Switch from './index';
+import Switch from '.';
 
 describe('Test Switch', () => {
 	test('without attr', () => {

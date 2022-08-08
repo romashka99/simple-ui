@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
-import { Color, Size } from '../../types/types';
+import { Color, Size } from 'types/types';
 import './Button.scss';
 
 interface IButtonProps
@@ -32,7 +32,7 @@ export default function Button({
 	}`;
 
 	return (
-		<button data-testid='button' className={classes} {...props}>
+		<button {...props} data-testid='button' className={classes}>
 			{children}
 		</button>
 	);

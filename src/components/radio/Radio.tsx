@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react';
-import { Color, Size } from '../../types/types';
+import { Color, Size } from 'types/types';
 import './Radio.scss';
 
 interface IRadioProps
@@ -26,7 +26,7 @@ export default function Radio({
 
 	return (
 		<>
-			<input data-testid='radio' type='radio' className={classes} {...props} />
+			<input {...props} data-testid='radio' type='radio' className={classes} />
 			{label && <label>{label}</label>}
 		</>
 	);

@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react';
-import { Color, Size } from '../../types/types';
+import { Color, Size } from 'types/types';
 import './Checkbox.scss';
 
 interface ICheckboxProps
@@ -27,10 +27,10 @@ export default function Checkbox({
 	return (
 		<>
 			<input
+				{...props}
 				data-testid='checkbox'
 				type='checkbox'
 				className={classes}
-				{...props}
 			/>
 			{label && <label>{label}</label>}
 		</>

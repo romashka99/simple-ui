@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Checkbox from './index';
+import Checkbox from '.';
 
 describe('Test Checkbox', () => {
 	test('without attr', () => {

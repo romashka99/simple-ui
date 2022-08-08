@@ -27,10 +27,10 @@ export default function Switch({
 	return (
 		<>
 			<input
+				{...props}
 				data-testid='switch'
 				type='checkbox'
 				className={classes}
-				{...props}
 			/>
 			{label && <label>{label}</label>}
 		</>

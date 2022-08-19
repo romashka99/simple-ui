@@ -15,6 +15,27 @@ export default {
 		type: {
 			description: 'The type of the input.',
 		},
+		value: {
+			type: { name: 'string' },
+			description: 'The value of the input.',
+			table: {
+				type: { summary: 'string' },
+			},
+			control: { type: 'text' },
+		},
+		readOnly: {
+			type: { name: 'boolean' },
+			table: {
+				type: { summary: 'boolean' },
+			},
+			description: 'Readonly state of the button.',
+			control: { type: 'boolean' },
+		},
+		onChange: {
+			type: { name: 'function' },
+			description: 'Set the handler to handle change event.',
+			action: 'clicked',
+		},
 	},
 } as ComponentMeta<typeof Input>;
 

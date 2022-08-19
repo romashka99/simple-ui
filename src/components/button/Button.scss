@@ -38,7 +38,17 @@
 		border-radius: $border-radius-round;
 	}
 
-	&--default:not(&:disabled) {
+	&:disabled {
+		color: $color-white;
+		cursor: not-allowed;
+	}
+
+	&--default:disabled {
+		color: $disabled-text-color;
+		border-color: $disabled-border-color;
+	}
+
+	&--default:not(:disabled) {
 		&:hover,
 		&:focus {
 			color: $color-primary;
@@ -63,31 +73,38 @@
 		background-color: $color-primary;
 		border-color: $color-primary;
 
-		&.is-plain {
-			color: $color-primary;
-			background-color: $color-primary-light-9;
-			border-color: $color-primary-light-5;
+		&:disabled {
+			&.is-plain {
+				color: $color-primary-light-5;
+				background-color: $color-primary-light-9;
+				border-color: $color-primary-light-8;
+			}
+
+			&:not(.is-plain) {
+				background-color: $color-primary-light-5;
+				border-color: $color-primary-light-5;
+			}
 		}
 
 		&:not(:disabled) {
-			&:hover,
-			&:focus {
-				color: $color-white;
-				background-color: $color-primary-light-3;
-				border-color: $color-primary-light-3;
+			&:not(.is-plain) {
+				&:hover,
+				&:focus {
+					color: $color-white;
+					background-color: $color-primary-light-3;
+					border-color: $color-primary-light-3;
+				}
 			}
 
 			&.is-plain {
+				color: $color-primary;
+				background-color: $color-primary-light-9;
+				border-color: $color-primary-light-5;
+
 				&:hover,
 				&:focus {
 					background-color: $color-primary;
 					border-color: $color-primary;
-				}
-
-				&:active {
-					color: $color-white;
-					background-color: $color-primary-dark-2;
-					border-color: $color-primary-dark-2;
 				}
 			}
 
@@ -104,31 +121,39 @@
 		color: $color-white;
 		border-color: $color-success;
 
-		&.is-plain {
-			background-color: $color-success-light-9;
-			color: $color-success;
-			border-color: $color-success-light-5;
+		&:disabled {
+			&.is-plain {
+				color: $color-success-light-5;
+				background-color: $color-success-light-9;
+				border-color: $color-success-light-8;
+			}
+
+			&:not(.is-plain) {
+				background-color: $color-success-light-5;
+				border-color: $color-success-light-5;
+			}
 		}
 
 		&:not(:disabled) {
-			&:hover,
-			&:focus {
-				color: $color-white;
-				background-color: $color-success-light-3;
-				border-color: $color-success-light-3;
+			&:not(.is-plain) {
+				&:hover,
+				&:focus {
+					color: $color-white;
+					background-color: $color-success-light-3;
+					border-color: $color-success-light-3;
+				}
 			}
 
 			&.is-plain {
+				background-color: $color-success-light-9;
+				color: $color-success;
+				border-color: $color-success-light-5;
+
 				&:hover,
 				&:focus {
+					color: $color-white;
 					background-color: $color-success;
 					border-color: $color-success;
-				}
-
-				&:active {
-					color: $color-white;
-					background-color: $color-success-dark-2;
-					border-color: $color-success-dark-2;
 				}
 			}
 
@@ -145,31 +170,39 @@
 		color: $color-white;
 		border-color: $color-danger;
 
-		&.is-plain {
-			background-color: $color-danger-light-9;
-			color: $color-danger;
-			border-color: $color-danger-light-5;
+		&:disabled {
+			&.is-plain {
+				color: $color-danger-light-5;
+				background-color: $color-danger-light-9;
+				border-color: $color-danger-light-8;
+			}
+
+			&:not(.is-plain) {
+				background-color: $color-danger-light-5;
+				border-color: $color-danger-light-5;
+			}
 		}
 
 		&:not(:disabled) {
-			&:hover,
-			&:focus {
-				color: $color-white;
-				background-color: $color-danger-light-3;
-				border-color: $color-danger-light-3;
+			&:not(.is-plain) {
+				&:hover,
+				&:focus {
+					color: $color-white;
+					background-color: $color-danger-light-3;
+					border-color: $color-danger-light-3;
+				}
 			}
 
 			&.is-plain {
+				background-color: $color-danger-light-9;
+				color: $color-danger;
+				border-color: $color-danger-light-5;
+
 				&:hover,
 				&:focus {
+					color: $color-white;
 					background-color: $color-danger;
 					border-color: $color-danger;
-				}
-
-				&:active {
-					color: $color-white;
-					background-color: $color-danger-dark-2;
-					border-color: $color-danger-dark-2;
 				}
 			}
 
@@ -186,31 +219,39 @@
 		color: $color-white;
 		border-color: $color-info;
 
-		&.is-plain {
-			background-color: $color-info-light-9;
-			color: $color-info;
-			border-color: $color-info-light-5;
+		&:disabled {
+			&.is-plain {
+				color: $color-info-light-5;
+				background-color: $color-info-light-9;
+				border-color: $color-info-light-8;
+			}
+
+			&:not(.is-plain) {
+				background-color: $color-info-light-5;
+				border-color: $color-info-light-5;
+			}
 		}
 
 		&:not(:disabled) {
-			&:hover,
-			&:focus {
-				color: $color-white;
-				background-color: $color-info-light-3;
-				border-color: $color-info-light-3;
+			&:not(.is-plain) {
+				&:hover,
+				&:focus {
+					color: $color-white;
+					background-color: $color-info-light-3;
+					border-color: $color-info-light-3;
+				}
 			}
 
 			&.is-plain {
+				background-color: $color-info-light-9;
+				color: $color-info;
+				border-color: $color-info-light-5;
+
 				&:hover,
 				&:focus {
+					color: $color-white;
 					background-color: $color-info;
 					border-color: $color-info;
-				}
-
-				&:active {
-					color: $color-white;
-					background-color: $color-info-dark-2;
-					border-color: $color-info-dark-2;
 				}
 			}
 
@@ -227,31 +268,39 @@
 		color: $color-white;
 		border-color: $color-warning;
 
-		&.is-plain {
-			background-color: $color-warning-light-9;
-			color: $color-warning;
-			border-color: $color-warning-light-5;
+		&:disabled {
+			&.is-plain {
+				color: $color-warning-light-5;
+				background-color: $color-warning-light-9;
+				border-color: $color-warning-light-8;
+			}
+
+			&:not(.is-plain) {
+				background-color: $color-warning-light-5;
+				border-color: $color-warning-light-5;
+			}
 		}
 
 		&:not(:disabled) {
-			&:hover,
-			&:focus {
-				color: $color-white;
-				background-color: $color-warning-light-3;
-				border-color: $color-warning-light-3;
+			&:not(.is-plain) {
+				&:hover,
+				&:focus {
+					color: $color-white;
+					background-color: $color-warning-light-3;
+					border-color: $color-warning-light-3;
+				}
 			}
 
 			&.is-plain {
+				background-color: $color-warning-light-9;
+				color: $color-warning;
+				border-color: $color-warning-light-5;
+
 				&:hover,
 				&:focus {
+					color: $color-white;
 					background-color: $color-warning;
 					border-color: $color-warning;
-				}
-
-				&:active {
-					color: $color-white;
-					background-color: $color-warning-dark-2;
-					border-color: $color-warning-dark-2;
 				}
 			}
 

@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test Checkbox without attr 1`] = `
-<input
+<label
   class="checkbox checkbox--default checkbox--medium"
   data-testid="checkbox"
-  type="checkbox"
-/>
+>
+  <input
+    class="checkbox--inner"
+    type="checkbox"
+  />
+</label>
 `;

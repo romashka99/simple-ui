@@ -25,14 +25,9 @@ export default function Checkbox({
 	}`;
 
 	return (
-		<>
-			<input
-				{...props}
-				data-testid='checkbox'
-				type='checkbox'
-				className={classes}
-			/>
-			{label && <label>{label}</label>}
-		</>
+		<label data-testid='checkbox' className={classes}>
+			<input {...props} className='checkbox--inner' type='checkbox' />
+			{label && <div className='checkbox--label'>{label}</div>}
+		</label>
 	);
 }

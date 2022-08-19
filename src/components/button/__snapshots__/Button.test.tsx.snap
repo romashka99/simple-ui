@@ -73,15 +73,6 @@ exports[`Test Button default large 1`] = `
 </button>
 `;
 
-exports[`Test Button default link 1`] = `
-<button
-  class="button button--default button--medium is-link"
-  data-testid="button"
->
-  Click
-</button>
-`;
-
 exports[`Test Button default onClick 1`] = `
 <button
   class="button button--default button--medium"

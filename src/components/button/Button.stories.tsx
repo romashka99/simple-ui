@@ -18,11 +18,21 @@ export default {
 		round: {
 			description: `Determine whether it's a round button.`,
 		},
-		circle: {
-			description: `Determine whether it's a circle button.`,
-		},
 		children: {
 			description: 'The content of the button.',
+		},
+		disabled: {
+			type: { name: 'boolean' },
+			table: {
+				type: { summary: 'boolean' },
+			},
+			description: 'Disabled state of the button.',
+			control: { type: 'boolean' },
+		},
+		onClick: {
+			type: { name: 'function' },
+			description: 'Set the handler to handle click event.',
+			action: 'clicked',
 		},
 	},
 } as ComponentMeta<typeof Button>;
@@ -63,6 +73,18 @@ export const Warning = Template.bind({});
 Warning.args = {
 	children: 'Button',
 	color: 'warning',
+};
+
+export const Plain = Template.bind({});
+Plain.args = {
+	children: 'Button',
+	plain: true,
+};
+
+export const Round = Template.bind({});
+Round.args = {
+	children: 'Button',
+	round: true,
 };
 
 export const Disabled = Template.bind({});

@@ -12,7 +12,6 @@ interface IButtonProps
 	scale?: Size;
 	plain?: boolean;
 	round?: boolean;
-	circle?: boolean;
 }
 
 export default function Button({
@@ -20,16 +19,13 @@ export default function Button({
 	scale = 'medium',
 	plain,
 	round,
-	circle,
 	className,
 	children,
 	...props
 }: IButtonProps) {
 	const classes = `button button--${color} button--${scale}${
 		plain ? ' is-plain' : ''
-	}${round ? ' is-round' : ''}${circle ? ' is-circle' : ''}${
-		className ? ' ' + className : ''
-	}`;
+	}${round ? ' is-round' : ''}${className ? ' ' + className : ''}`;
 
 	return (
 		<button {...props} data-testid='button' className={classes}>

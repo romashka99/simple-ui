@@ -1,5 +1,4 @@
 import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react';
-import { Color, Size } from '../../types/types';
 import './Switch.scss';
 
 interface ISwitchProps
@@ -8,31 +7,31 @@ interface ISwitchProps
 			HTMLInputElement
 		>,
 		React.AriaAttributes {
-	color?: Color;
-	scale?: Size;
 	label?: string;
+	outline?: boolean;
+	android?: boolean;
 }
 
 export default function Switch({
-	color = 'default',
-	scale = 'medium',
 	label,
+	outline,
+	android,
 	className,
 	...props
 }: ISwitchProps) {
-	const classes = `switch switch--${color} switch--${scale}${
-		className ? ' ' + className : ''
-	}`;
+	const classes = `switch${outline ? ' switch--outline' : ''}${
+		android ? ' switch--android' : ''
+	}${className ? ' ' + className : ''}`;
 
 	return (
-		<>
+		<label data-testid='switch' className={classes}>
 			<input
 				{...props}
-				data-testid='switch'
+				className='switch--inner'
+				data-testid='switch-inner'
 				type='checkbox'
-				className={classes}
 			/>
-			{label && <label>{label}</label>}
-		</>
+			{label && <span className='switch--label'>{label}</span>}
+		</label>
 	);
 }

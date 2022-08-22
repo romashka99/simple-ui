@@ -1,25 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Input type text size large 1`] = `
-<input
-  class="input input--large"
+exports[`Test Input disabled 1`] = `
+<label
+  class="input"
   data-testid="input"
-  type="text"
-/>
+>
+  <input
+    class="input--inner"
+    data-testid="input-inner"
+    disabled=""
+    type="text"
+  />
+</label>
 `;
 
-exports[`Test Input type text size small 1`] = `
-<input
-  class="input input--small"
+exports[`Test Input has label 1`] = `
+<label
+  class="input"
   data-testid="input"
-  type="text"
-/>
+>
+  <span
+    class="input--label"
+  >
+    Label
+  </span>
+  <input
+    class="input--inner"
+    data-testid="input-inner"
+    type="text"
+  />
+</label>
 `;
 
-exports[`Test Input type text without attr 1`] = `
-<input
-  class="input input--medium"
+exports[`Test Input onChange 1`] = `
+<label
+  class="input"
   data-testid="input"
-  type="text"
-/>
+>
+  <input
+    class="input--inner"
+    data-testid="input-inner"
+    type="text"
+  />
+</label>
+`;
+
+exports[`Test Input readOnly 1`] = `
+<label
+  class="input"
+  data-testid="input"
+>
+  <input
+    class="input--inner"
+    data-testid="input-inner"
+    readonly=""
+    type="text"
+  />
+</label>
+`;
+
+exports[`Test Input without attr 1`] = `
+<label
+  class="input"
+  data-testid="input"
+>
+  <input
+    class="input--inner"
+    data-testid="input-inner"
+    type="text"
+  />
+</label>
 `;

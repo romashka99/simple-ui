@@ -7,13 +7,17 @@ export default {
 	component: Input,
 	argTypes: {
 		label: {
+			type: { name: 'string' },
+			table: {
+				type: { summary: 'string' },
+			},
 			description: 'The label of the input.',
-		},
-		scale: {
-			description: 'The size of the input.',
+			control: { type: 'text' },
 		},
 		type: {
 			description: 'The type of the input.',
+			options: ['text', 'email', 'password'],
+			control: { type: 'radio' },
 		},
 		value: {
 			type: { name: 'string' },
@@ -39,24 +43,12 @@ export default {
 	},
 } as ComponentMeta<typeof Input>;
 
-const Template: ComponentStory<typeof Input> = args => <Input {...args} />;
+const Template: ComponentStory<typeof Input> = args => (
+	<Input label='Label' placeholder='Placeholder' {...args} />
+);
 
 export const Default = Template.bind({});
-Default.args = {
-	label: 'Name',
-	type: 'text',
-	scale: 'medium',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-	scale: 'small',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-	scale: 'large',
-};
+Default.args = {};
 
 export const Disabled = Template.bind({});
 Disabled.args = {

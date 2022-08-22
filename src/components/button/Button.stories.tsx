@@ -6,12 +6,6 @@ export default {
 	title: 'UI/Button',
 	component: Button,
 	argTypes: {
-		color: {
-			description: 'The color of the button.',
-		},
-		scale: {
-			description: 'The size of the button.',
-		},
 		plain: {
 			description: `Determine whether it's a plain button.`,
 		},
@@ -41,54 +35,24 @@ const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-	children: 'Button',
+	children: 'Label',
 	color: 'default',
-};
-
-export const Primary = Template.bind({});
-Primary.args = {
-	children: 'Button',
-	color: 'primary',
-};
-
-export const Success = Template.bind({});
-Success.args = {
-	children: 'Button',
-	color: 'success',
-};
-
-export const Error = Template.bind({});
-Error.args = {
-	children: 'Button',
-	color: 'error',
-};
-
-export const Info = Template.bind({});
-Info.args = {
-	children: 'Button',
-	color: 'info',
-};
-
-export const Warning = Template.bind({});
-Warning.args = {
-	children: 'Button',
-	color: 'warning',
 };
 
 export const Plain = Template.bind({});
 Plain.args = {
-	children: 'Button',
+	children: 'Label',
 	plain: true,
 };
 
 export const Round = Template.bind({});
 Round.args = {
-	children: 'Button',
+	children: 'Label',
 	round: true,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	children: 'Button',
+	children: 'Label',
 	disabled: true,
 };

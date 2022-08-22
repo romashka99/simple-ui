@@ -1,12 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Checkbox without attr 1`] = `
+exports[`Test Checkbox checked 1`] = `
 <label
-  class="checkbox checkbox--default checkbox--medium"
+  class="checkbox"
   data-testid="checkbox"
 >
   <input
     class="checkbox--inner"
+    data-testid="checkbox-inner"
+    type="checkbox"
+  />
+</label>
+`;
+
+exports[`Test Checkbox disabled 1`] = `
+<label
+  class="checkbox is-disabled"
+  data-testid="checkbox"
+>
+  <input
+    class="checkbox--inner"
+    data-testid="checkbox-inner"
+    disabled=""
+    type="checkbox"
+  />
+</label>
+`;
+
+exports[`Test Checkbox has label 1`] = `
+<label
+  class="checkbox"
+  data-testid="checkbox"
+>
+  <input
+    class="checkbox--inner"
+    data-testid="checkbox-inner"
+    type="checkbox"
+  />
+  <span
+    class="checkbox--label"
+  >
+    Label
+  </span>
+</label>
+`;
+
+exports[`Test Checkbox onChange 1`] = `
+<label
+  class="checkbox"
+  data-testid="checkbox"
+>
+  <input
+    class="checkbox--inner"
+    data-testid="checkbox-inner"
+    type="checkbox"
+  />
+</label>
+`;
+
+exports[`Test Checkbox without attr 1`] = `
+<label
+  class="checkbox"
+  data-testid="checkbox"
+>
+  <input
+    class="checkbox--inner"
+    data-testid="checkbox-inner"
     type="checkbox"
   />
 </label>

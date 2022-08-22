@@ -49,7 +49,18 @@ export default {
 	},
 } as ComponentMeta<typeof Switch>;
 
-const Template: ComponentStory<typeof Switch> = args => <Switch {...args} />;
+const Template: ComponentStory<typeof Switch> = args => (
+	<Switch label='Label' {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Outline = Template.bind({});
+Outline.args = { outline: true };
+
+export const Android = Template.bind({});
+Android.args = { android: true };
+
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };

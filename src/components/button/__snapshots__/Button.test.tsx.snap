@@ -1,53 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Button color error 1`] = `
-<button
-  class="button button--error button--medium"
-  data-testid="button"
->
-  Click
-</button>
-`;
-
-exports[`Test Button color info 1`] = `
-<button
-  class="button button--info button--medium"
-  data-testid="button"
->
-  Click
-</button>
-`;
-
-exports[`Test Button color primary 1`] = `
-<button
-  class="button button--primary button--medium"
-  data-testid="button"
->
-  Click
-</button>
-`;
-
-exports[`Test Button color success 1`] = `
-<button
-  class="button button--success button--medium"
-  data-testid="button"
->
-  Click
-</button>
-`;
-
-exports[`Test Button color warning 1`] = `
-<button
-  class="button button--warning button--medium"
-  data-testid="button"
->
-  Click
-</button>
-`;
-
 exports[`Test Button default custom className 1`] = `
 <button
-  class="button button--default button--medium test-class"
+  class="button  test-class"
   data-testid="button"
 >
   Click
@@ -56,7 +11,7 @@ exports[`Test Button default custom className 1`] = `
 
 exports[`Test Button default disabled 1`] = `
 <button
-  class="button button--default button--medium"
+  class="button "
   data-testid="button"
   disabled=""
 >
@@ -64,19 +19,20 @@ exports[`Test Button default disabled 1`] = `
 </button>
 `;
 
-exports[`Test Button default large 1`] = `
+exports[`Test Button default onClick 1`] = `
 <button
-  class="button button--default button--large"
+  class="button "
   data-testid="button"
 >
   Click
 </button>
 `;
 
-exports[`Test Button default onClick 1`] = `
+exports[`Test Button default onClick with disabled 1`] = `
 <button
-  class="button button--default button--medium"
+  class="button "
   data-testid="button"
+  disabled=""
 >
   Click
 </button>
@@ -84,7 +40,7 @@ exports[`Test Button default onClick 1`] = `
 
 exports[`Test Button default plain 1`] = `
 <button
-  class="button button--default button--medium is-plain"
+  class="button  is-plain"
   data-testid="button"
 >
   Click
@@ -93,16 +49,7 @@ exports[`Test Button default plain 1`] = `
 
 exports[`Test Button default round 1`] = `
 <button
-  class="button button--default button--medium is-round"
-  data-testid="button"
->
-  Click
-</button>
-`;
-
-exports[`Test Button default small 1`] = `
-<button
-  class="button button--default button--small"
+  class="button  is-round"
   data-testid="button"
 >
   Click
@@ -111,7 +58,7 @@ exports[`Test Button default small 1`] = `
 
 exports[`Test Button default without attr 1`] = `
 <button
-  class="button button--default button--medium"
+  class="button "
   data-testid="button"
 >
   Click

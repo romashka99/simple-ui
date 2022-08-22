@@ -1,5 +1,4 @@
 import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react';
-import { Color, Size } from 'types/types';
 import './Radio.scss';
 
 interface IRadioProps
@@ -8,26 +7,21 @@ interface IRadioProps
 			HTMLInputElement
 		>,
 		React.AriaAttributes {
-	color?: Color;
-	scale?: Size;
 	label?: string;
 }
 
-export default function Radio({
-	color = 'default',
-	scale = 'medium',
-	label,
-	className,
-	...props
-}: IRadioProps) {
-	const classes = `radio radio--${color} radio--${scale}${
-		className ? ' ' + className : ''
-	}`;
+export default function Radio({ label, className, ...props }: IRadioProps) {
+	const classes = `radio${className ? ' ' + className : ''}`;
 
 	return (
-		<>
-			<input {...props} data-testid='radio' type='radio' className={classes} />
-			{label && <label>{label}</label>}
-		</>
+		<label data-testid='radio' className={classes}>
+			<input
+				{...props}
+				className='radio--inner'
+				data-testid='radio-inner'
+				type='radio'
+			/>
+			{label && <span className='radio--label'>{label}</span>}
+		</label>
 	);
 }

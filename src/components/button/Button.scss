@@ -1,313 +1,64 @@
-@import '../../variables.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/main.scss';
+@import '../../styles/style.scss';
 
 .button {
-	display: inline-flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: $height;
-	line-height: $height;
-	white-space: nowrap;
+	height: 40px;
+	padding: 10px 30px;
+
 	cursor: pointer;
-	text-align: center;
-	box-sizing: border-box;
-	outline: none;
-	transition: 0.1s;
 
-	color: $text-color-regular;
-	background-color: $color;
+	background-color: $color-grey;
+	color: $color-white;
 	border: $border;
-	padding: 8px 15px;
-	border-radius: $border-radius-base;
+	border-radius: $border-radius;
 
-	&--small {
-		font-size: $font-size-small;
-		height: $height-small;
-		line-height: $height-small;
-		padding: 5px 11px;
-		border-radius: $border-radius-small;
-	}
-
-	&--large {
-		font-size: $font-size-large;
-		padding: 12px 19px;
-		height: $height-large;
-		line-height: $height-large;
-	}
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
 
 	&.is-round {
-		border-radius: $border-radius-round;
+		border-radius: 100px;
+	}
+
+	&.is-plain {
+		background-color: $color-white;
+		color: $color-grey;
 	}
 
 	&:disabled {
-		color: $color-white;
 		cursor: not-allowed;
+		background-color: $color-mid-light-grey;
+		border-color: $color-mid-light-grey;
 	}
 
-	&--default:disabled {
-		color: $disabled-text-color;
-		border-color: $disabled-border-color;
-	}
+	&:not(:disabled) {
+		&:not(.is-plain) {
+			&:hover,
+			&:focus {
+				background-color: $color-mid-grey;
+				border-color: $color-mid-grey;
+			}
 
-	&--default:not(:disabled) {
-		&:hover,
-		&:focus {
-			color: $color-primary;
-			background-color: $color-primary-light-9;
-			border-color: $color-primary-light-7;
-		}
-
-		&:active {
-			border-color: $color-primary;
+			&:active {
+				background-color: $color-dark-grey;
+				border-color: $color-dark-grey;
+			}
 		}
 
 		&.is-plain {
 			&:hover,
 			&:focus {
-				background-color: $color-white;
-			}
-		}
-	}
-
-	&--primary {
-		color: $color-white;
-		background-color: $color-primary;
-		border-color: $color-primary;
-
-		&:disabled {
-			&.is-plain {
-				color: $color-primary-light-5;
-				background-color: $color-primary-light-9;
-				border-color: $color-primary-light-8;
-			}
-
-			&:not(.is-plain) {
-				background-color: $color-primary-light-5;
-				border-color: $color-primary-light-5;
-			}
-		}
-
-		&:not(:disabled) {
-			&:not(.is-plain) {
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-primary-light-3;
-					border-color: $color-primary-light-3;
-				}
-			}
-
-			&.is-plain {
-				color: $color-primary;
-				background-color: $color-primary-light-9;
-				border-color: $color-primary-light-5;
-
-				&:hover,
-				&:focus {
-					background-color: $color-primary;
-					border-color: $color-primary;
-				}
+				color: $color-mid-grey;
+				border-color: $color-mid-grey;
 			}
 
 			&:active {
-				color: $color-white;
-				background-color: $color-primary-dark-2;
-				border-color: $color-primary-dark-2;
-			}
-		}
-	}
-
-	&--success {
-		background-color: $color-success;
-		color: $color-white;
-		border-color: $color-success;
-
-		&:disabled {
-			&.is-plain {
-				color: $color-success-light-5;
-				background-color: $color-success-light-9;
-				border-color: $color-success-light-8;
-			}
-
-			&:not(.is-plain) {
-				background-color: $color-success-light-5;
-				border-color: $color-success-light-5;
-			}
-		}
-
-		&:not(:disabled) {
-			&:not(.is-plain) {
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-success-light-3;
-					border-color: $color-success-light-3;
-				}
-			}
-
-			&.is-plain {
-				background-color: $color-success-light-9;
-				color: $color-success;
-				border-color: $color-success-light-5;
-
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-success;
-					border-color: $color-success;
-				}
-			}
-
-			&:active {
-				color: $color-white;
-				background-color: $color-success-dark-2;
-				border-color: $color-success-dark-2;
-			}
-		}
-	}
-
-	&--error {
-		background-color: $color-danger;
-		color: $color-white;
-		border-color: $color-danger;
-
-		&:disabled {
-			&.is-plain {
-				color: $color-danger-light-5;
-				background-color: $color-danger-light-9;
-				border-color: $color-danger-light-8;
-			}
-
-			&:not(.is-plain) {
-				background-color: $color-danger-light-5;
-				border-color: $color-danger-light-5;
-			}
-		}
-
-		&:not(:disabled) {
-			&:not(.is-plain) {
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-danger-light-3;
-					border-color: $color-danger-light-3;
-				}
-			}
-
-			&.is-plain {
-				background-color: $color-danger-light-9;
-				color: $color-danger;
-				border-color: $color-danger-light-5;
-
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-danger;
-					border-color: $color-danger;
-				}
-			}
-
-			&:active {
-				color: $color-white;
-				background-color: $color-danger-dark-2;
-				border-color: $color-danger-dark-2;
-			}
-		}
-	}
-
-	&--info {
-		background-color: $color-info;
-		color: $color-white;
-		border-color: $color-info;
-
-		&:disabled {
-			&.is-plain {
-				color: $color-info-light-5;
-				background-color: $color-info-light-9;
-				border-color: $color-info-light-8;
-			}
-
-			&:not(.is-plain) {
-				background-color: $color-info-light-5;
-				border-color: $color-info-light-5;
-			}
-		}
-
-		&:not(:disabled) {
-			&:not(.is-plain) {
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-info-light-3;
-					border-color: $color-info-light-3;
-				}
-			}
-
-			&.is-plain {
-				background-color: $color-info-light-9;
-				color: $color-info;
-				border-color: $color-info-light-5;
-
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-info;
-					border-color: $color-info;
-				}
-			}
-
-			&:active {
-				color: $color-white;
-				background-color: $color-info-dark-2;
-				border-color: $color-info-dark-2;
-			}
-		}
-	}
-
-	&--warning {
-		background-color: $color-warning;
-		color: $color-white;
-		border-color: $color-warning;
-
-		&:disabled {
-			&.is-plain {
-				color: $color-warning-light-5;
-				background-color: $color-warning-light-9;
-				border-color: $color-warning-light-8;
-			}
-
-			&:not(.is-plain) {
-				background-color: $color-warning-light-5;
-				border-color: $color-warning-light-5;
-			}
-		}
-
-		&:not(:disabled) {
-			&:not(.is-plain) {
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-warning-light-3;
-					border-color: $color-warning-light-3;
-				}
-			}
-
-			&.is-plain {
-				background-color: $color-warning-light-9;
-				color: $color-warning;
-				border-color: $color-warning-light-5;
-
-				&:hover,
-				&:focus {
-					color: $color-white;
-					background-color: $color-warning;
-					border-color: $color-warning;
-				}
-			}
-
-			&:active {
-				color: $color-white;
-				background-color: $color-warning-dark-2;
-				border-color: $color-warning-dark-2;
+				color: $color-dark-grey;
+				border-color: $color-dark-grey;
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Checkbox from './Checkbox';
+import Checkbox from './';
 
 export default {
 	title: 'UI/Checkbox',
@@ -50,10 +50,13 @@ export default {
 } as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = args => (
-	<Checkbox {...args} />
+	<Checkbox label='Label' {...args} />
 );
 
 export const Default = Template.bind({});
-Default.args = {
-	label: 'Label',
+Default.args = {};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	disabled: true,
 };

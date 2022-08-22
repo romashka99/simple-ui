@@ -49,7 +49,12 @@ export default {
 	},
 } as ComponentMeta<typeof Radio>;
 
-const Template: ComponentStory<typeof Radio> = args => <Radio {...args} />;
+const Template: ComponentStory<typeof Radio> = args => (
+	<Radio label='Label' {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };

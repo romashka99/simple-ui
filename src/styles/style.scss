@@ -1,0 +1,35 @@
+@import './colors.scss';
+
+$font-family: 'Inter', sans-serif;
+$font-weight: 400;
+
+$font-size-h1: 42px;
+$font-line-height-h1: 48px;
+
+$font-size-h2: 36px;
+$font-line-height-h2: 44px;
+
+$font-size-h3: 24px;
+$font-line-height-h3: 32px;
+
+$font-size-h4: 18px;
+$font-line-height-h4: 24px;
+
+$font-size-body: 16px;
+$font-line-height-body: 24px;
+
+$font-size-body-small: 14px;
+$font-line-height-body-small: 20px;
+
+$font-size-small: 12px;
+$font-line-height-small: 16px;
+
+$font-size-link: 16px;
+$font-line-height-link: 24px;
+
+$font-size-link-small: 14px;
+$font-line-height-link-small: 20px;
+
+$border: 1px solid $color-grey;
+$border-radius: 4px;
+$border-radius-circle: 50%;

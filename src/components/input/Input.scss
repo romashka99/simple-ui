@@ -1,49 +1,55 @@
-@import '../../variables.scss';
+@import '../../styles/colors.scss';
+@import '../../styles/main.scss';
+@import '../../styles/style.scss';
 
 .input {
-	padding: 0 10px;
-	border: $border;
-	border-radius: $border-radius-base;
-	background-color: $fill-color-blank;
-	color: $text-color-regular;
-	height: $height;
-	line-height: $height;
-	outline: none;
-	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
 
-	&::placeholder {
-		color: $text-color-regular;
+	.input--label,
+	.input--help {
+		font-size: 12px;
+		line-height: 16px;
 	}
 
-	&--small {
-		font-size: $font-size-small;
-		height: $height-small;
-		line-height: $height-small;
-		padding: 0 7px;
-		border-radius: $border-radius-small;
-	}
-
-	&--large {
-		font-size: $font-size-large;
-		padding: 0 15px;
-		height: $height-large;
-		line-height: $height-large;
-	}
-
-	&:disabled {
-		border-color: $disabled-border-color;
-		background-color: $disabled-bg-color;
-		color: $disabled-text-color;
-		cursor: not-allowed;
-	}
-
-	&:not(&:disabled) {
-		&:hover {
-			box-shadow: $box-shadow-lighter;
+	&.is-disabled {
+		.input--label,
+		.input--help {
+			color: $color-mid-light-grey;
 		}
-		&:active,
-		&:focus {
-			border-color: $border-color-active;
+	}
+
+	.input--inner {
+		padding: 12px 8px;
+		border: $border;
+		border-radius: $border-radius;
+		background-color: $color-white;
+		color: $color-grey;
+		height: 48px;
+		line-height: 24px;
+		font-size: 16px;
+		box-sizing: border-box;
+
+		&::placeholder {
+			color: $color-grey;
+		}
+
+		&:disabled {
+			border-color: $color-mid-light-grey;
+			color: $color-mid-light-grey;
+			cursor: not-allowed;
+
+			&::placeholder {
+				color: $color-mid-light-grey;
+			}
+		}
+
+		&:not(:disabled) {
+			&:hover {
+			}
+			&:active,
+			&:focus {
+			}
 		}
 	}
 }

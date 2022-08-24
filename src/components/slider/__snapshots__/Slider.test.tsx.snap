@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Slider disabled 1`] = `
+<div
+  class="slider is-disabled"
+  data-testid="slider"
+>
+  <div
+    class="slider--inner"
+    data-testid="slider-inner"
+  >
+    <div
+      class="slider--filled"
+      data-testid="slider-filled"
+      style="width: 0%;"
+    >
+      <button
+        class="slider--control"
+        data-testid="slider-control"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Slider onChange 1`] = `
+<div
+  class="slider"
+  data-testid="slider"
+>
+  <div
+    class="slider--inner"
+    data-testid="slider-inner"
+  >
+    <div
+      class="slider--filled"
+      data-testid="slider-filled"
+      style="width: 0%;"
+    >
+      <button
+        class="slider--control"
+        data-testid="slider-control"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Slider without attr 1`] = `
+<div
+  class="slider"
+  data-testid="slider"
+>
+  <div
+    class="slider--inner"
+    data-testid="slider-inner"
+  >
+    <div
+      class="slider--filled"
+      data-testid="slider-filled"
+      style="width: 0%;"
+    >
+      <button
+        class="slider--control"
+        data-testid="slider-control"
+      />
+    </div>
+  </div>
+</div>
+`;

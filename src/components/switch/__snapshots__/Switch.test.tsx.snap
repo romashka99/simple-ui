@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Switch checked 1`] = `
+<label
+  class="switch"
+  data-testid="switch"
+>
+  <input
+    class="switch--inner"
+    data-testid="switch-inner"
+    type="checkbox"
+  />
+</label>
+`;
+
+exports[`Test Switch disabled 1`] = `
+<label
+  class="switch"
+  data-testid="switch"
+>
+  <input
+    class="switch--inner"
+    data-testid="switch-inner"
+    disabled=""
+    type="checkbox"
+  />
+</label>
+`;
+
+exports[`Test Switch has label 1`] = `
+<label
+  class="switch"
+  data-testid="switch"
+>
+  <input
+    class="switch--inner"
+    data-testid="switch-inner"
+    type="checkbox"
+  />
+  <span
+    class="switch--label"
+  >
+    Label
+  </span>
+</label>
+`;
+
+exports[`Test Switch onChange 1`] = `
+<label
+  class="switch"
+  data-testid="switch"
+>
+  <input
+    class="switch--inner"
+    data-testid="switch-inner"
+    type="checkbox"
+  />
+</label>
+`;
+
+exports[`Test Switch without attr 1`] = `
+<label
+  class="switch"
+  data-testid="switch"
+>
+  <input
+    class="switch--inner"
+    data-testid="switch-inner"
+    type="checkbox"
+  />
+</label>
+`;

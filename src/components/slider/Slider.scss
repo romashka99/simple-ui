@@ -1,0 +1,38 @@
+@import '../../styles/colors.scss';
+@import '../../styles/main.scss';
+@import '../../styles/style.scss';
+
+.slider {
+	display: flex;
+	position: relative;
+	cursor: pointer;
+
+	padding: 10px;
+
+	.slider--inner {
+		position: relative;
+		height: 5px;
+		width: 100%;
+		background-color: $color-mid-light-grey;
+		border-radius: 5px;
+	}
+
+	.slider--filled {
+		position: absolute;
+		height: 5px;
+		border-radius: 5px;
+		background-color: $color-grey;
+	}
+
+	.slider--control {
+		cursor: pointer;
+		position: absolute;
+		height: 23px;
+		width: 23px;
+		border: $border;
+		border-radius: 50%;
+		background-color: $color-white;
+		right: 0;
+		top: -10px;
+	}
+}

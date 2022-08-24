@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Select default without attr 1`] = `
+<select
+  class="select"
+  data-testid="select"
+>
+  Click
+</select>
+`;

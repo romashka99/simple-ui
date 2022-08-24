@@ -1,0 +1,70 @@
+@import '../../styles/colors.scss';
+@import '../../styles/main.scss';
+@import '../../styles/style.scss';
+
+.radio {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	cursor: pointer;
+
+	.radio--label {
+		padding-left: 8px;
+
+		color: $color-grey;
+
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.radio--inner {
+		-webkit-appearance: none;
+		box-sizing: border-box;
+		outline: none;
+		position: relative;
+		margin: 0;
+
+		cursor: pointer;
+
+		width: 20px;
+		height: 20px;
+
+		background: $color-white;
+		border: $border;
+		border-radius: $border-radius-circle;
+
+		&:checked:after {
+			content: '';
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			top: 3px;
+			left: 3px;
+			background: $color-grey;
+			border-radius: $border-radius-circle;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+			background: $color-light-grey;
+			border-color: $color-mid-light-grey;
+
+			&:checked:after {
+				background: $color-mid-light-grey;
+			}
+
+			+ .radio--label {
+				cursor: not-allowed;
+				color: $color-mid-light-grey;
+			}
+		}
+
+		&:hover {
+			&:not(:checked) {
+				&:not(:disabled) {
+				}
+			}
+		}
+	}
+}

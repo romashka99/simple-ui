@@ -1,0 +1,59 @@
+@import '../../styles/colors.scss';
+@import '../../styles/main.scss';
+@import '../../styles/style.scss';
+
+.textarea {
+	display: flex;
+	flex-direction: column;
+
+	& .textarea--label,
+	& .textarea--help {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	& .textarea--help {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&.is-disabled {
+		.textarea--label,
+		.textarea--help {
+			color: $color-mid-light-grey;
+		}
+	}
+
+	.textarea--inner {
+		padding: 12px 8px;
+		border: $border;
+		border-radius: $border-radius;
+		background-color: $color-white;
+		color: $color-grey;
+		line-height: 24px;
+		font-size: 16px;
+		box-sizing: border-box;
+
+		&::placeholder {
+			color: $color-grey;
+		}
+
+		&:disabled {
+			border-color: $color-mid-light-grey;
+			color: $color-mid-light-grey;
+			cursor: not-allowed;
+
+			&::placeholder {
+				color: $color-mid-light-grey;
+			}
+		}
+
+		&:not(:disabled) {
+			&:hover {
+			}
+			&:active,
+			&:focus {
+			}
+		}
+	}
+}

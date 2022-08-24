@@ -1,5 +1,4 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
-import { Color, Size } from '../../types/types';
 import './Button.scss';
 
 interface IButtonProps
@@ -8,33 +7,23 @@ interface IButtonProps
 			HTMLButtonElement
 		>,
 		React.AriaAttributes {
-	color?: Color;
-	scale?: Size;
 	plain?: boolean;
 	round?: boolean;
-	circle?: boolean;
-	link?: boolean;
 }
 
 export default function Button({
-	color = 'default',
-	scale = 'medium',
 	plain,
 	round,
-	circle,
-	link,
 	className,
 	children,
 	...props
 }: IButtonProps) {
-	const classes = `button button--${color} button--${scale}${
-		plain ? ' is-plain' : ''
-	}${round ? ' is-round' : ''}${circle ? ' is-circle' : ''}${
-		link ? ' is-link' : ''
+	const classes = `button ${plain ? ' is-plain' : ''}${
+		round ? ' is-round' : ''
 	}${className ? ' ' + className : ''}`;
 
 	return (
-		<button data-testid='button' className={classes} {...props}>
+		<button {...props} data-testid='button' className={classes}>
 			{children}
 		</button>
 	);

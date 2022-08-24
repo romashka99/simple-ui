@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test TextArea disabled 1`] = `
+<label
+  class="textarea is-disabled"
+  data-testid="textarea"
+>
+  <textarea
+    class="textarea--inner"
+    data-testid="textarea-inner"
+    disabled=""
+  />
+</label>
+`;
+
+exports[`Test TextArea has help text 1`] = `
+<label
+  class="textarea"
+  data-testid="textarea"
+>
+  <textarea
+    class="textarea--inner"
+    data-testid="textarea-inner"
+  />
+  <div
+    class="textarea--help"
+  >
+    <div>
+      Help text
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Test TextArea has label 1`] = `
+<label
+  class="textarea"
+  data-testid="textarea"
+>
+  <span
+    class="textarea--label"
+  >
+    Label
+  </span>
+  <textarea
+    class="textarea--inner"
+    data-testid="textarea-inner"
+  />
+</label>
+`;
+
+exports[`Test TextArea onChange 1`] = `
+<label
+  class="textarea"
+  data-testid="textarea"
+>
+  <textarea
+    class="textarea--inner"
+    data-testid="textarea-inner"
+  >
+    abc
+  </textarea>
+</label>
+`;
+
+exports[`Test TextArea readOnly 1`] = `
+<label
+  class="textarea"
+  data-testid="textarea"
+>
+  <textarea
+    class="textarea--inner"
+    data-testid="textarea-inner"
+    readonly=""
+  />
+</label>
+`;
+
+exports[`Test TextArea without attr 1`] = `
+<label
+  class="textarea"
+  data-testid="textarea"
+>
+  <textarea
+    class="textarea--inner"
+    data-testid="textarea-inner"
+  />
+</label>
+`;

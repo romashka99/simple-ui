@@ -1,5 +1,4 @@
 import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react';
-import { Color, Size } from '../../types/types';
 import './Input.scss';
 
 export type InputType = 'text' | 'email' | 'password';
@@ -10,24 +9,33 @@ interface IInputProps
 			HTMLInputElement
 		>,
 		React.AriaAttributes {
-	label?: string;
 	type?: InputType;
-	color?: Color;
-	scale?: Size;
+	label?: string;
+	helpText?: string;
 }
 
 export default React.memo(function Input({
-	label,
 	type = 'text',
-	scale = 'medium',
+	label,
+	helpText,
+	disabled,
 	className,
 	...props
 }: IInputProps) {
-	const classes = `input input--${scale}${className ? ' ' + className : ''}`;
+	const classes = `input${disabled ? ' is-disabled' : ''}${
+		className ? ' ' + className : ''
+	}`;
 	return (
-		<>
-			{label && <label className='input__label'>{label}</label>}
-			<input data-testid='input' type={type} className={classes} {...props} />
-		</>
+		<label data-testid='input' className={classes}>
+			{label && <span className='input--label'>{label}</span>}
+			<input
+				{...props}
+				data-testid='input-inner'
+				type={type}
+				className='input--inner'
+				disabled={disabled}
+			/>
+			{helpText && <span className='input--help'>{helpText}</span>}
+		</label>
 	);
 });

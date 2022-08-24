@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Radio checked 1`] = `
+<label
+  class="radio"
+  data-testid="radio"
+>
+  <input
+    class="radio--inner"
+    data-testid="radio-inner"
+    type="radio"
+  />
+</label>
+`;
+
+exports[`Test Radio disabled 1`] = `
+<label
+  class="radio"
+  data-testid="radio"
+>
+  <input
+    class="radio--inner"
+    data-testid="radio-inner"
+    disabled=""
+    type="radio"
+  />
+</label>
+`;
+
+exports[`Test Radio has label 1`] = `
+<label
+  class="radio"
+  data-testid="radio"
+>
+  <input
+    class="radio--inner"
+    data-testid="radio-inner"
+    type="radio"
+  />
+  <span
+    class="radio--label"
+  >
+    Label
+  </span>
+</label>
+`;
+
+exports[`Test Radio onChange 1`] = `
+<label
+  class="radio"
+  data-testid="radio"
+>
+  <input
+    class="radio--inner"
+    data-testid="radio-inner"
+    type="radio"
+  />
+</label>
+`;
+
+exports[`Test Radio without attr 1`] = `
+<label
+  class="radio"
+  data-testid="radio"
+>
+  <input
+    class="radio--inner"
+    data-testid="radio-inner"
+    type="radio"
+  />
+</label>
+`;

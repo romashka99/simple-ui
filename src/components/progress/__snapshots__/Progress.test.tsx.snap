@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Progress without attr 1`] = `
+<div
+  class="progress"
+  data-testid="progress"
+>
+  <div
+    class="progress--inner"
+    data-testid="progress-inner"
+  >
+    <div
+      class="progress--filled"
+      style="width: 10%;"
+    />
+  </div>
+  <label
+    class="progress--label"
+    data-testid="progress-label"
+  >
+    10%
+  </label>
+</div>
+`;

@@ -2,30 +2,34 @@
 @import '../../styles/main.scss';
 @import '../../styles/style.scss';
 
-.input {
+.textarea {
 	display: flex;
 	flex-direction: column;
 
-	.input--label,
-	.input--help {
+	& .textarea--label,
+	& .textarea--help {
 		font-size: 12px;
 		line-height: 16px;
 	}
 
+	& .textarea--help {
+		display: flex;
+		justify-content: space-between;
+	}
+
 	&.is-disabled {
-		.input--label,
-		.input--help {
+		.textarea--label,
+		.textarea--help {
 			color: $color-mid-light-grey;
 		}
 	}
 
-	.input--inner {
+	.textarea--inner {
 		padding: 12px 8px;
 		border: $border;
 		border-radius: $border-radius;
 		background-color: $color-white;
 		color: $color-grey;
-		height: 48px;
 		line-height: 24px;
 		font-size: 16px;
 		box-sizing: border-box;

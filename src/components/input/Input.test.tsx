@@ -22,6 +22,14 @@ describe('Test Input', () => {
 		expect(input).toMatchSnapshot();
 	});
 
+	test('has help text', () => {
+		render(<Input helpText='Help text' />);
+		const input = screen.getByTestId('input');
+		const helpText = within(input).getByText('Help text');
+		expect(helpText).not.toBeNull();
+		expect(input).toMatchSnapshot();
+	});
+
 	test('disabled', () => {
 		render(<Input disabled />);
 		const input = screen.getByTestId('input');

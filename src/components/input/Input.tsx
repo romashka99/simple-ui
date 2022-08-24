@@ -9,17 +9,22 @@ interface IInputProps
 			HTMLInputElement
 		>,
 		React.AriaAttributes {
-	label?: string;
 	type?: InputType;
+	label?: string;
+	helpText?: string;
 }
 
 export default React.memo(function Input({
-	label,
 	type = 'text',
+	label,
+	helpText,
+	disabled,
 	className,
 	...props
 }: IInputProps) {
-	const classes = `input${className ? ' ' + className : ''}`;
+	const classes = `input${disabled ? ' is-disabled' : ''}${
+		className ? ' ' + className : ''
+	}`;
 	return (
 		<label data-testid='input' className={classes}>
 			{label && <span className='input--label'>{label}</span>}
@@ -28,7 +33,9 @@ export default React.memo(function Input({
 				data-testid='input-inner'
 				type={type}
 				className='input--inner'
+				disabled={disabled}
 			/>
+			{helpText && <span className='input--help'>{helpText}</span>}
 		</label>
 	);
 });

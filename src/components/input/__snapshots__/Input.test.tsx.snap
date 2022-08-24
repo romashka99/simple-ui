@@ -2,7 +2,7 @@
 
 exports[`Test Input disabled 1`] = `
 <label
-  class="input"
+  class="input is-disabled"
   data-testid="input"
 >
   <input
@@ -11,6 +11,24 @@ exports[`Test Input disabled 1`] = `
     disabled=""
     type="text"
   />
+</label>
+`;
+
+exports[`Test Input has help text 1`] = `
+<label
+  class="input"
+  data-testid="input"
+>
+  <input
+    class="input--inner"
+    data-testid="input-inner"
+    type="text"
+  />
+  <span
+    class="input--help"
+  >
+    Help text
+  </span>
 </label>
 `;
 

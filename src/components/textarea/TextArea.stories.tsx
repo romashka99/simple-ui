@@ -1,16 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Input from '.';
+import TextArea from '.';
 
 export default {
-	title: 'UI/Input',
-	component: Input,
+	title: 'UI/TextArea',
+	component: TextArea,
 	argTypes: {
-		type: {
-			description: 'The type of the input.',
-			options: ['text', 'email', 'password'],
-			control: { type: 'radio' },
-		},
 		label: {
 			type: { name: 'string' },
 			table: {
@@ -57,10 +52,11 @@ export default {
 			action: 'clicked',
 		},
 	},
-} as ComponentMeta<typeof Input>;
+} as ComponentMeta<typeof TextArea>;
 
-const Template: ComponentStory<typeof Input> = args => (
-	<Input
+const Template: ComponentStory<typeof TextArea> = args => (
+	<TextArea
+		rows={4}
 		label='Label'
 		helpText='Help text'
 		placeholder='Placeholder'
@@ -80,4 +76,11 @@ export const ReadOnly = Template.bind({});
 ReadOnly.args = {
 	value: 'Text',
 	readOnly: true,
+};
+
+export const ShowCount = Template.bind({});
+ShowCount.args = {
+	value: 'Text',
+	showCount: true,
+	maxLength: 100,
 };

@@ -15,7 +15,7 @@ exports[`Test Checkbox checked 1`] = `
 
 exports[`Test Checkbox disabled 1`] = `
 <label
-  class="checkbox is-disabled"
+  class="checkbox"
   data-testid="checkbox"
 >
   <input

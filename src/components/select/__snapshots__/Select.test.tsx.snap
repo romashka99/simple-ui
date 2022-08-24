@@ -2,7 +2,7 @@
 
 exports[`Test Select default without attr 1`] = `
 <select
-  class="select select--default select--medium"
+  class="select"
   data-testid="select"
 >
   Click

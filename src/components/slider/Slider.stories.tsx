@@ -1,22 +1,22 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Select, Option } from '.';
+import Slider from '.';
 
 export default {
-	title: 'UI/Select',
-	component: Select,
+	title: 'UI/Slider',
+	component: Slider,
 	argTypes: {
-		value: {
+		label: {
 			type: { name: 'string' },
-			description: 'The value of the select.',
 			table: {
 				type: { summary: 'string' },
 			},
+			description: 'The label of the input.',
 			control: { type: 'text' },
 		},
-		name: {
+		value: {
 			type: { name: 'string' },
-			description: 'The name of the select.',
+			description: 'The value of the input.',
 			table: {
 				type: { summary: 'string' },
 			},
@@ -27,7 +27,7 @@ export default {
 			table: {
 				type: { summary: 'boolean' },
 			},
-			description: 'Disabled state of the select.',
+			description: 'Disabled state of the button.',
 			control: { type: 'boolean' },
 		},
 		onChange: {
@@ -36,15 +36,16 @@ export default {
 			action: 'clicked',
 		},
 	},
-} as ComponentMeta<typeof Select>;
+} as ComponentMeta<typeof Slider>;
 
-const Template: ComponentStory<typeof Select> = args => (
-	<Select placeholder='Placeholder' {...args}>
-		<Option value={1}>1</Option>
-		<Option value={2}>2</Option>
-		<Option value={3}>3</Option>
-	</Select>
+const Template: ComponentStory<typeof Slider> = args => (
+	<Slider value={5} min={0} max={100} step={1} {...args} />
 );
 
 export const Default = Template.bind({});
 Default.args = {};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	disabled: true,
+};

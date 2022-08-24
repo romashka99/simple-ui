@@ -1,7 +1,7 @@
 name: GitHub Actions
 on: [push]
-init:
-  Explore-GitHub-Actions:
+jobs:
+  init:
     runs-on: ubuntu-latest
     strategy:
       matrix:
